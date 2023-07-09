@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api Data</title>
+    <style>
+        
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        #container{
+            height: fit-content;
+            width: 100%;
+            background-color: #fafafa;
+            display: flex;
+            flex-wrap: wrap;
+            
+        }
+
+        .product-content{
+            height: 400px;
+            width: 23%;
+            margin: 10px;
+            box-shadow: 2px 2px 5px grey;
+            border-radius: 10px;
+            background-color: #fff;
+        }
+
+        .product-img{
+            height: 300px;
+            width: 100%;
+            border-radius: 10px;
+            padding: 5px;
+        }
+
+        .product-title, .product-category ,.product-price{
+            margin:0px 4px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Products</h1>
+
+    <div id="container">
+
+    </div>
+
+    <script>
+
+        let elementData = ''
+
+        fetch('https://fakestoreapi.com/products')
+        .then(response => response.json())
+        .then(data => {
+             console.log(data);
+            for (let i = 0; i < data.length; i++) {
+                const element = data[i];
+                // console.log("Element", element)
+                elementData += `<div class="product-content"> <img class="product-img" src='${element.image}' /> <h3 class="product-title"> ${element.title} </h3> <p class="product-category"> ${element.category} </p> <h4 class="product-price"> $  ${element.price} </h4> </div>`
+            }
+            document.getElementById('container').innerHTML = elementData;
+        }
+        );
+
+    </script>
+    
+</body>
+</html>

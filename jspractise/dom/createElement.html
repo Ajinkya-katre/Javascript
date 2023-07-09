@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<body>
+    
+    <h1>HI <span id="name"></span></h1>
+    <img src="https://www.timeoutdubai.com/cloud/timeoutdubai/2021/09/11/udHvbKwV-IMG-Dubai-UAE-1.jpg" alt="" style="height: 100px;" onmouseover="imgClick()" onmouseout="imgOut()">
+
+    <script>
+
+        function imgClick(){
+            const img = document.querySelector('img').src = 'ajiu.jpg';
+        }
+        function imgOut(){
+            const img = document.querySelector('img').src = 'https://www.timeoutdubai.com/cloud/timeoutdubai/2021/09/11/udHvbKwV-IMG-Dubai-UAE-1.jpg';                
+        }
+        // img.src = 'ajiu.jpg'
+        const name = document.querySelector('h1')
+        
+        name.innerText = "Ajinkya KAtre"
+
+        //create Element
+
+
+        let firstchild =  document.createElement('input')
+        let firstbtn =  document.createElement('button')
+        firstbtn.innerText = "demo"
+        
+        //set attribute
+        firstchild.setAttribute('value','Ajinkya katre')
+        
+        document.body.appendChild(firstchild)
+        document.body.appendChild(firstbtn)
+    </script>
+
+</body>
+</html>

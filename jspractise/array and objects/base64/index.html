@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base 64</title>
+</head>
+<body>
+
+    <button onclick="base64()">Change Stuff</button>
+    
+    <iframe src="https://i0.wp.com/vizartpandey.com/wp-content/uploads/2021/04/Screenshot-2021-04-24-at-9.26.08-PM.png?resize=696%2C436&ssl=1" frameborder="1" id="myIframe"></iframe>
+
+    <div id="demoBase" ></div>
+    
+    <script>
+        const iframe = document.getElementById('myIframe');
+        // function changeStuff() {
+        //     const iframeWindow = iframe.contentWindow;
+        //     const iframeDocument = iframe.contentDocument;
+
+        //     iframeDocument.body.style.backgroundColor = 'red';
+            
+        // }
+        
+        function base64(){
+            console.log(iframe)
+            let base = btoa(iframe)
+            var img = new Iframe();
+            img.src = `data:image/png;base64, ${base}`;
+            img.height = '500px';
+            img.width = '500px';
+            console.log(img)
+            document.getElementById("demoBase").appendChild = img;
+
+            
+        }
+
+
+    </script>
+</body>
+</html>

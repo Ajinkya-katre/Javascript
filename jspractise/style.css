@@ -1,0 +1,277 @@
+*{
+    margin: 0px;
+}
+
+nav{
+    background-color: black;
+    color: white; 
+    display: flex;
+    justify-content: space-between;
+}
+nav > ul{
+    display: flex;
+    list-style: none;
+    justify-content: end;
+}
+li{
+    padding: 14px 16px ;
+}
+ul > li:hover{
+    background-color: pink;
+    color: black;
+}
+h1{
+    background-color: aqua;
+}
+img{
+    height: 50px;
+    width: 50px;
+    padding-left: 30px;
+}
+
+.main-content{
+    display: flex;
+}
+
+aside{
+    width: 256px;
+    background-color: aquamarine;
+    color: black;
+    height: 500px;
+}
+
+aside > ul {
+    list-style: none;
+    padding: 0px;
+}
+
+.main-content > main{
+    background-color: greenyellow;
+    color: black;
+    width: calc(100% - 256px);
+}
+
+
+/* cards section */
+
+    .cards-section{
+        margin:20px;
+        display: flex;
+    }
+
+    .card{
+        background-color: #fafafa;
+        color: black;
+        border-radius: 10px;
+        width: 20%;
+        padding: 20px;
+        box-shadow: 2px 2px 10px grey;
+        margin: 0px 10px;
+    }
+
+
+/* end cards section */
+
+  
+@media screen and (max-width:1200px) {
+    nav{
+    background-color: red;
+    color: black; 
+    }
+
+    .main-content{
+    display: flex;
+    /* flex-direction: column; */
+  }
+    .main-content > aside{
+        /* width: 19%; */
+        height: auto;
+    }
+
+    aside > ul{
+        display: flex;
+        flex-direction: column;
+        /* flex-wrap: wrap; */
+        /* background-color: rebeccapurple; */
+    }
+
+    .main-content > main{
+    background-color: floralwhite;
+    color: black;
+    /* width: 80%; */
+    height: 600px;
+    }
+
+    .cards-section{
+        margin:20px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .card{
+        background-color: #fafafa;
+        color: black;
+        border-radius: 10px;
+        width: 18%;
+        padding: 20px;
+        box-shadow: 2px 2px 10px grey;
+        margin: 10px 10px;
+    }
+
+
+}
+
+@media (max-width:992px) {
+    nav{
+    background-color: salmon;
+    color: black; 
+    }
+
+    .main-content{
+    display: flex;
+    /* flex-direction: column; */
+  }
+    .main-content > aside{
+        /* width: 19%; */
+        height: auto;
+    }
+
+    aside > ul{
+        display: flex;
+        flex-direction: column;
+        /* flex-wrap: wrap; */
+    }
+
+    .main-content > main{
+    background-color: rgb(12, 29, 24);
+    color: black;
+    /* width: 80%; */
+    height: 600px;
+    }
+
+    .cards-section{
+        margin:20px;
+        display: flex;
+        /* flex-wrap: wrap; */
+    }
+
+    .card{
+        background-color: #fafafa;
+        color: black;
+        border-radius: 10px;
+        width: 35%;
+        padding: 20px;
+        box-shadow: 2px 2px 10px grey;
+        margin: 10px 10px;
+    }
+
+}
+
+
+@media (max-width:768px) {
+    nav{
+    background-color: darkblue;
+    color: black; 
+    }
+
+    .main-content{
+    display: flex;
+    /* flex-direction: column; */
+  }
+    .main-content > aside{
+        /* width: 19%; */
+        height: auto;
+    }
+
+    aside > ul{
+        display: flex;
+        flex-direction: column;
+        /* flex-wrap: wrap; */
+    }
+
+    .main-content > main{
+    background-color: greenyellow;
+    color: black;
+    /* width: 80%; */
+    height: 600px;
+    }
+
+    .cards-section{
+        margin:20px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .card{
+        background-color: #fafafa;
+        color: black;
+        border-radius: 10px;
+        width: 100%;
+        padding: 20px;
+        box-shadow: 2px 2px 10px grey;
+        margin: 10px 10px;
+    }
+
+}
+
+
+
+
+@media (max-width:560px) {
+    nav{
+    background-color: grey;
+    color: red; 
+    }
+
+    .main-content{
+    display: flex;
+    flex-direction: column;
+  }
+    .main-content > aside{
+        width: 100%;
+        height: auto;
+    }
+
+    aside > ul{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .main-content > main{
+    background-color: rgb(30, 36, 20);
+    color: black;
+    width: 100%;
+    height: 600px;
+    }
+
+
+}
+
+/* @media (min-width:992px) {
+    nav{
+    background-color: indigo;
+    color: white; 
+    }
+
+    .main-content{
+    display: flex;
+    flex-direction: column;
+  }
+    .main-content > aside{
+        width: 20%;
+        height: auto;
+    }
+
+    aside > ul{
+        display: flex;
+    }
+
+    .main-content > main{
+    background-color: royalblue;
+    color: white;
+    width: 80%;
+    }
+
+
+} */

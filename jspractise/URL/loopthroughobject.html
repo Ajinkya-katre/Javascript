@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Looping through an object in JavaScript</title>
+  </head>
+  <body>
+    <h1>Looping through an object</h1>
+    <p id="output"></p>
+    
+    <script>
+      const obj = {a: 1, b: 2, c: 3};
+      let output = '';
+
+      for (let key in obj) {
+        output += key + ': ' + obj[key] + '<br>';
+      }
+
+      document.getElementById('output').innerHTML = output;
+    </script>
+  </body>
+</html>
+
+
+

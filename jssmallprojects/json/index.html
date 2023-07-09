@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api Data</title>
+    <style>
+        #hobbies{
+            background-color:purple;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Api Data</h1>
+
+    <p id="name"></p>
+    <p id="age"></p>
+    <p id="city"></p>   
+    <p id="country"></p>
+    <ul id="hobbies"></ul>
+    <ul id="skills"></ul>
+
+
+    <script>
+
+        let element = ''
+
+        fetch('./apidata.json')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("name").innerHTML = data.name;
+            document.getElementById("age").innerHTML = data.age;
+            document.getElementById("city").innerHTML = data.city;
+            document.getElementById("country").innerHTML = data.country;
+            data.hobbies.forEach(element => {
+                document.getElementById("hobbies").innerHTML += `<li>${element}</li>`;
+                });
+            data.skills.forEach(element => {
+                document.getElementById("skills").innerHTML += `<li>${element}</li>`;
+                });
+                });
+
+    </script>
+    
+</body>
+</html>

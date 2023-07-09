@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Looping through an object in JavaScript</title>
+  </head>
+  <body>
+    <h1>Event data:</h1>
+    <div id="eventdata"></div>
+    <script>
+      const saveinfo = {
+        "value": {
+          "eventdata": "{'ad1':'val1','ad2':'val2','ad3':'val3'}"
+        }
+      };
+
+      const data = saveinfo.value.eventdata
+      const fixedJson = data.replace(/'/g,'"')
+      const eventData = JSON.parse(fixedJson);
+      let html = '<ul>';
+
+      for (let key in eventData) {
+        html += '<li>' + key + ': ' + eventData[key] + '</li>';
+      }
+
+      html += '</ul>';
+      document.getElementById('eventdata').innerHTML = html;
+    </script>
+  </body>
+</html>

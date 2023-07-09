@@ -1,0 +1,9 @@
+{
+    "name":"ajinkya",
+    "age":23,
+    "city":"pune",
+    "country":"india",
+    "hobbies":["music","reading","travelling"],
+    "skills":["html","css","js","react","angular","node","express","mongo","mysql","mongoDB","firebase","aws","linux","git","github","docker","jenkins"],
+    "languages":["english","hindi","marathi"]
+}

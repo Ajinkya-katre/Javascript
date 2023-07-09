@@ -1,0 +1,28 @@
+Start-up   - Fast Development. short term - vision
+				
+
+MNC        - Good Engineer. long term - vision. In-depth code writing.
+
+
+javascript - core strong. 
+
+
+Steps To Start from begining :-
+
+1) Basic Start for portfolio website. 
+	---- Prerequsites javascript.
+	Learn JAVASCRIPT IN DEPTH.
+
+2) Create small apps in Angular/React.
+
+3) Stick to One framework.
+
+
+Intern 
+
+SDE 1 - Junior 
+
+SDE 2 - Main, Code Produce, Complete without help , Work with Design , Collab with backend developer for api
+
+SDE 3 - tech lead. technology needed, distribute work.
+
