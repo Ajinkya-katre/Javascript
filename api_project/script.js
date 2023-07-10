@@ -1,9 +1,10 @@
-const apiUrl = 'https://jsonplaceholder.typicode.com/users' 
+const userBtn = document.getElementById('user-btn');
 
-async function loadApi(api){
+async function loadApi(){
     try{
+        const apiUrl = 'https://jsonplaceholder.typicode.com/users' 
         showLoader(true);
-        const response = await fetch(api);
+        const response = await fetch(apiUrl);
         let  data = await response.json();
         console.log(data);
         showLoader(false);
@@ -13,7 +14,7 @@ async function loadApi(api){
       }
 }
 
-loadApi(apiUrl);
+// loadApi(apiUrl);
 
 function showLoader(show){
     const body = document.body;
@@ -22,6 +23,9 @@ function showLoader(show){
         loader.setAttribute('id','loader');
         body.appendChild(loader);
     }else{
-        body.remove(loader);
+        let loaderDiv = document.getElementById('loader');
+        body.removeChild(loaderDiv);
     }
 }
+
+userBtn.addEventListener('click',loadApi)
